@@ -17,14 +17,14 @@ class Header extends React.Component {
             <Navbar expand="lg" fixed='top' className='navbar-transparent navbar-color-on-scroll py-4'>
 
 
-                <Navbar.Brand href="#home" style={{ color: 'black', position: 'relative', left: '80px', fontSize: '2.5rem' }}>Jade Luo</Navbar.Brand>
+                <Navbar.Brand href="#/" style={{ color: 'black', position: 'relative', left: '80px', fontSize: '2.5rem' }}>Jade Luo</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto pr-5" style={{ mixBlendMode: 'overlay' }}>
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#link">3D Art</Nav.Link>
-                        <Nav.Link href="#link">2D Art</Nav.Link>
-                        <Nav.Link href="#link">Team Project</Nav.Link>
+                        <Nav.Link href="#/">Home</Nav.Link>
+                        <Nav.Link href="#3dart">3D Art</Nav.Link>
+                        <Nav.Link href="#2dart">2D Art</Nav.Link>
+                        <Nav.Link href="#team">Team Project</Nav.Link>
                         <Nav.Link href="#link">Resume</Nav.Link>
                         <Nav.Link href="#link">Contact</Nav.Link>
                         <NavDropdown title="Dropdown" id="basic-nav-dropdown">
