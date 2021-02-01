@@ -61,29 +61,29 @@ class ArtworkImage extends React.Component {
         }
         const hoverTextStyle = {
             position: 'absolute',
-            top: '20%',
+            top: '30%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
             color: 'white',
             background: 'rgb(0, 0, 0)', /* fallback color */
             background: 'rgba(0, 0, 0, 0)',
-            padding: '0px',
-            textAlign: 'center',
             zIndex: 3,
             mixBlendMode: 'difference'
         }
 
         const hoverSubtitleStyle = {
             position: 'absolute',
-            top: '50%',
+            top: '60%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
             color: 'white',
             background: 'rgb(0, 0, 0)', /* fallback color */
             background: 'rgba(0, 0, 0, 0)',
-            padding: '0px',
-            textAlign: 'center',
             zIndex: 3,
             mixBlendMode: 'difference'
         }
         return (
-            <Container onMouseEnter={this.toggleEnter} onMouseLeave={this.toggleLeave} className='m-0 px-1' style={{ display: 'inline-flex', position: 'relative', zIndex: 1, justifyContent: 'center' }}>
+            <Container onMouseEnter={this.toggleEnter} onMouseLeave={this.toggleLeave} className='m-0 px-1' style={{ display: 'inline-flex', position: 'relative', zIndex: 1, justifyContent: 'center', flexDirection: "column", textAlign: "center" }}>
 
                 <img src={this.props.DisplayImg} style={portfolioImgStyle} />
                 {this.state.hover && <h3 style={hoverTextStyle}> {this.props.DisplayTitle} </h3>}
@@ -144,32 +144,36 @@ class DetailArtwork extends React.Component {
                             <Tab.Pane eventKey="first" className='text-center gallery'>
                                 <Container>
                                     <Row className='justify-content-center my-3'>
-                                        <Col md={4} className='ml-auto mr-0 pr-0'>
+                                        <Col md={1} />
+                                        <Col md={5} className='mx-auto'>
                                             {/* <img src={img1} style={portfolioImgStyle}></img> */}
                                             {/* <ArtworkImage DisplayImg={img1} DisplayText='more details' />
                                             <ArtworkImage DisplayImg={img2} DisplayText='more details' /> */}
                                             <ArtworkImage DisplayImg={imgHorrorHouse} DisplayTitle='Horror House' DisplaySubtitle='2019' />
 
                                         </Col>
-                                        <Col md={4} className='mr-auto ml-0 pl-0'>
+                                        <Col md={5} className='mx-auto'>
                                             <ArtworkImage DisplayImg={imgOtherWorld} DisplayTitle='Other World' DisplaySubtitle='2018' />
                                         </Col>
+                                        <Col md={1} />
                                     </Row>
                                 </Container>
                             </Tab.Pane>
                             <Tab.Pane eventKey="second">
                                 <Container>
                                     <Row className='justify-content-center my-3'>
-                                        <Col md={4} className='ml-auto mr-0 pr-0'>
+                                        <Col md={1} />
+                                        <Col md={5} className='mx-auto'>
 
                                             <ArtworkImage DisplayImg={imgFreezeFinal} DisplayTitle='Mr. Freeze Diorama' DisplaySubtitle='2020' />
                                             <ArtworkImage DisplayImg={imgRock} DisplayTitle='Duck Bill Rock' DisplaySubtitle='2020' />
 
                                         </Col>
-                                        <Col md={4} className='mr-auto ml-0 pl-0'>
+                                        <Col md={5} className='mx-auto'>
                                             <ArtworkImage DisplayImg={imgGun} DisplayTitle='Gun' DisplaySubtitle='2020' />
                                             <ArtworkImage DisplayImg={imgAirCompressor} DisplayTitle='Air Compressor' DisplaySubtitle='2019' />
                                         </Col>
+                                        <Col md={1} />
                                     </Row>
                                 </Container>
                             </Tab.Pane>
