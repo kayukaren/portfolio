@@ -25,9 +25,9 @@ class Header extends React.Component {
                         <Nav.Link href="#3dart">3D Art</Nav.Link>
                         <Nav.Link href="#2dart">2D Art</Nav.Link>
                         <Nav.Link href="#team">Team Project</Nav.Link>
-                        <Nav.Link href="#link">Resume</Nav.Link>
-                        <Nav.Link href="#link">Contact</Nav.Link>
-                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                        <Nav.Link href="#link" disabled={true}>Resume</Nav.Link>
+                        <Nav.Link href="#link" disabled={true}>Contact</Nav.Link>
+                        <NavDropdown title="More" id="basic-nav-dropdown" disabled={true}>
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
@@ -38,7 +38,7 @@ class Header extends React.Component {
 
                 </Navbar.Collapse>
 
-            </Navbar>
+            </Navbar >
         )
     }
 }
