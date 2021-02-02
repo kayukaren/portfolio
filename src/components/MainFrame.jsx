@@ -7,6 +7,11 @@ import Media from 'react-bootstrap/Media';
 
 import { Parallax, Background } from 'react-parallax';
 
+import {
+    BrowserView,
+    MobileView,
+} from "react-device-detect";
+
 // import some test image
 // import bgImage1 from '../materialize-assets/img/bg.jpg';
 import bgImage1 from '../img/sculpture.jpeg';
@@ -32,17 +37,31 @@ class MainFrame extends React.Component {
     render() {
         return (
             <>
-
-                <Parallax
-                    blur={{ min: -15, max: 15 }}
-                    bgImage={bgImage1}
-                    bgImageAlt="the background"
-                    strength={-200}
-                    bgImageStyle={{ top: '-5rem' }}
-                >
-                    {/* Blur transition from min to max */}
-                    <div style={{ height: 600 }}></div>
-                </Parallax>
+                <BrowserView>
+                    <Parallax
+                        blur={{ min: -15, max: 15 }}
+                        bgImage={bgImage1}
+                        bgImageAlt="the background"
+                        strength={-200}
+                        bgImageStyle={{ top: '-5rem' }}
+                    >
+                        {/* Blur transition from min to max */}
+                        <div style={{ height: 600 }}></div>
+                    </Parallax>
+                </BrowserView>
+                {/* in mobile we shift the sculpture a bit downward for asthetic */}
+                <MobileView>
+                    <Parallax
+                        blur={{ min: -15, max: 15 }}
+                        bgImage={bgImage1}
+                        bgImageAlt="the background"
+                        strength={-200}
+                        bgImageStyle={{ top: '5rem' }}
+                    >
+                        {/* Blur transition from min to max */}
+                        <div style={{ height: 600 }}></div>
+                    </Parallax>
+                </MobileView>
                 <Header></Header>
 
                 <div className='main main-raised'>
